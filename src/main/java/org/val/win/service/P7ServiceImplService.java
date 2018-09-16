@@ -15,7 +15,7 @@ import javax.xml.ws.Service;
  *
  */
 @WebServiceClient(name = "P7ServiceImplService",
-                  wsdlLocation = "file:/Users/v.w/Documents/GitHub/Projet_7_Webapp/src/main/java/org/val/win/service.wsdl",
+                  wsdlLocation = "http://localhost:8080/service?wsdl",
                   targetNamespace = "http://impl.service.win.val.org/")
 public class P7ServiceImplService extends Service {
 
@@ -26,11 +26,11 @@ public class P7ServiceImplService extends Service {
     static {
         URL url = null;
         try {
-            url = new URL("file:/Users/v.w/Documents/GitHub/Projet_7_Webapp/src/main/java/org/val/win/service.wsdl");
+            url = new URL("http://localhost:8080/service?wsdl");
         } catch (MalformedURLException e) {
             java.util.logging.Logger.getLogger(P7ServiceImplService.class.getName())
                 .log(java.util.logging.Level.INFO,
-                     "Can not initialize the default wsdl from {0}", "file:/Users/v.w/Documents/GitHub/Projet_7_Webapp/src/main/java/org/val/win/service.wsdl");
+                     "Can not initialize the default wsdl from {0}", "http://localhost:8080/service?wsdl");
         }
         WSDL_LOCATION = url;
     }
