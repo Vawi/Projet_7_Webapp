@@ -11,7 +11,7 @@ import javax.xml.namespace.QName;
 import java.net.URL;
 import java.util.Map;
 
-public class LoginAction extends ActionSupport implements SessionAware {
+public class GestionLoginAction extends ActionSupport implements SessionAware {
 
     /**
      * Connection au webservice
