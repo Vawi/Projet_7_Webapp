@@ -21,10 +21,8 @@
                     <li> <a href="topo_new.action"> Créer un nouveau topo </a> </li>
                 </ul>
                 <s:if test="#session.check == 'true'">
-                    <s:a action="utilisateur_detail" theme="simple">
-                        <span>Vous etes connecté <s:property value="#session.user.prenom"/> </span>
-                        <br />
-                    </s:a>
+                    <span>Vous etes connecté <s:property value="#session.user.prenom"/> </span>
+                    <br />
                     <s:a action="logout" theme="simple">
                         <span> Deconnection </span>
                     </s:a>

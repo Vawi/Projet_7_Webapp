@@ -2,7 +2,6 @@
 <!DOCTYPE struts PUBLIC
         "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
         "http://struts.apache.org/dtds/struts-2.5.dtd">
-
 <struts>
 
     <package name="ajax" extends="default, json-default">
@@ -35,7 +34,7 @@
 
     </package>
 
-    <package name="default" extends="default">
+    <package name="default" extends="struts-default">
 
         <!-- Action par défaut -->
 
@@ -53,12 +52,6 @@
             <result>/JSP/index.jsp</result>
         </action>
 
-
-        <!-- Page Erreur -->
-        <global-results>
-            <result name="error">/JSP/error.jsp</result>
-        </global-results>
-
         <!-- Actions Login/Logout -->
 
         <action name="login" class="org.val.win.webapp.action.GestionLoginAction" method="doLogin">
@@ -70,6 +63,5 @@
         </action>
 
     </package>
-
 
 </struts>
