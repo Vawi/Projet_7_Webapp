@@ -9,6 +9,15 @@
 
 <body>
 
+    <p> tutu </p>
+
+
+
+    <script>
+        $( document ).ready(function() {
+            getListComAjax();
+        });
+    </script>
 </body>
 
 </html>

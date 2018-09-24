@@ -55,7 +55,6 @@
         <!-- Actions Login/Logout -->
 
         <action name="login" class="org.val.win.webapp.action.GestionLoginAction" method="doLogin">
-            <result name="input">/JSP/login.jsp</result>
             <result name="success" type="redirectAction">index</result>
         </action>
         <action name="logout" class="org.val.win.webapp.action.GestionLoginAction" method="doLogout">
