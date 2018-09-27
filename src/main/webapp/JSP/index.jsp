@@ -9,15 +9,19 @@
 
 <body>
 
-    <p> tutu </p>
-
+    <ul id="listOuvrage">
+        <li >
+            <em> ouvrage </em>
+        </li>
+    </ul>
 
 
     <script>
         $( document ).ready(function() {
-            getListComAjax();
+            getListOuvrageAjax();
         });
     </script>
+
 </body>
 
 </html>

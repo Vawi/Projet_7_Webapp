@@ -1,28 +1,18 @@
-function getListOuvrage() {
-    // URL de l'action AJAX
-    var url = "listOuvrage";
-    // Action AJAX en POST
+function getListOuvrageAjax() {
+    var url = "listOuvrageAjax";
     jQuery.post(
         url,
         function (data) {
-            var $selectOuvrage = jQuery("#selectOuvrage");
-            $selectOuvrage.empty();
-            console.log(data);
+            var $listOuvrage = jQuery("#listOuvrage");
+            $listOuvrage.empty();
             jQuery.each(data, function (key, val) {
-                $selectOuvrage.append(
-                    jQuery("<option>")
-                        .text(val.nomOuvrage)
-                        .text(val.auteur)
-                        .val(val.idOuvrage)
+                $listOuvrage.append(
+                    jQuery("<li>")
+                        .append(val.nomOuvrage)
                 );
             });
         })
-        .fail(function (data) {
-            if (typeof data.responseJSON === 'object') {
-                console.log(data.responseJSON);
-            } else {
-                console.log(data);
-            }
-            alert("Oh zut, la bibliothèque n'a pas d'ouvrage");
+        .fail(function () {
+            alert("Pas de commentaire");
         });
 }

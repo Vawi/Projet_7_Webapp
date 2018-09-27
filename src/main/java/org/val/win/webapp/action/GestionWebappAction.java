@@ -1,5 +1,6 @@
 package org.val.win.webapp.action;
 
+import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.SessionAware;
 import org.val.win.model.bean.Emprunt;
@@ -86,6 +87,14 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
         this.listOuvrageDispo = listOuvrageDispo;
     }
 
+    public List<Ouvrage> getListOuvrage() {
+        return listOuvrage;
+    }
+
+    public void setListOuvrage(List<Ouvrage> listOuvrage) {
+        this.listOuvrage = listOuvrage;
+    }
+
     public Utilisateur getUtilisateur() {
         return utilisateur;
     }
@@ -115,5 +124,21 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
     public String doListOuvrageDispo() {
         listOuvrageDispo = port.getListDispo().getItem();
         return ActionSupport.SUCCESS;
+    }
+
+    public String prolongerEmprunt() {
+        // emprunt =
+        utilisateur = (Utilisateur) session.get("user");
+        if(session.get("user") == null){
+            return ActionSupport.LOGIN;
+        }
+        else {
+            String vResult = Action.INPUT;
+            if (!this.hasErrors()) {
+                    port.prolongationEmprunt(emprunt);
+                    vResult = ActionSupport.SUCCESS;
+            }
+            return vResult;
+        }
     }
 }

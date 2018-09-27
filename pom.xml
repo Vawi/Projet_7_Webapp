@@ -44,7 +44,6 @@
     </dependency>
 
     <!-- ===== Struts AJAX ===== -->
-
     <dependency>
       <groupId>org.apache.struts</groupId>
       <artifactId>struts2-json-plugin</artifactId>
@@ -70,18 +69,7 @@
       <artifactId>validation-api</artifactId>
       <version>1.1.0.Final</version>
     </dependency>
-    <dependency>
-      <groupId>org.apache.bval</groupId>
-      <artifactId>bval-jsr</artifactId>
-      <version>1.1.2</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>servlet-api</artifactId>
-    <version>2.5</version>
-    <scope>provided</scope>
-    </dependency>
+
 
     <!-- Gestion des logs avec Log4j -->
     <dependency>

@@ -16,7 +16,7 @@
         </global-results>
 
         <!-- Action listant les topos -->
-        <action name="listOuvrage"
+        <action name="listOuvrageAjax"
                 class="org.val.win.webapp.action.GestionWebappAction"
                 method="doListOuvrage">
             <result name="success" type="json">
@@ -24,7 +24,7 @@
             </result>
         </action>
 
-        <action name="listEmpruntUtil"
+        <action name="listEmpruntUtilAjax"
                 class="org.val.win.webapp.action.GestionWebappAction"
                 method="doListEmpruntUtil">
             <result name="success" type="json">
