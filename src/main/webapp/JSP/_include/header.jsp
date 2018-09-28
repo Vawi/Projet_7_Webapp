@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="col-lg-12">
-            <nav class="navbar navbar-dark bg-primary">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <s:if test="#session.check == 'true'">
                         <span>Vous etes connecté <s:property value="#session.user.prenom"/> </span>
@@ -22,7 +22,7 @@
                         </s:a>
                     </s:if>
                     <s:else >
-                        <s:form action="login" class="navbar-form navbar-right inline-form" theme="simple">
+                        <s:form  action="login" class="form-inline my-2 my-lg-0" theme="simple">
                             <s:textfield name="login" label="Identifiant" requiredLabel="true" class="input-sm form-control" theme="simple"/>
                             <s:password name="password" label="Mot de passe" requiredLabel="true" type="password" class="input-sm form-control" theme="simple"/>
                             <s:submit value="Connexion" class="btn btn-primary btn-sm" type="submit" theme="simple"/>
