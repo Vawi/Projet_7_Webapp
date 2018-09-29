@@ -9,19 +9,22 @@
 
 <body>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-sm">
+            <div class="col-lg">
                 <ul id="listOuvrage">
                     <li >
                         <em> ouvrage </em>
                     </li>
                 </ul>
             </div>
-            <div class="col-sm">
-                Emprunt de la bibliotheque
+            <div class="col-lg">
+                Information de la bibliotheque
             </div>
-            <div class="col-sm">
+            <s:if test="#session.check == 'true'">
+                <!-- Condition pour lancer la recherche d'emprunt dès que l'utilisateur se connecte -->
+            </s:if>
+            <div class="col-lg">
                 <ul id="listEmprunt">
                     <li >
                         <em> Emprunt de l'utilisateur </em>

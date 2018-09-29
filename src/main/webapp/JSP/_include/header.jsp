@@ -10,10 +10,11 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="col-lg-12">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
+                    <a class="navbar-brand">La Bibliotheque</a>
                     <s:if test="#session.check == 'true'">
                         <span>Vous etes connecté <s:property value="#session.user.prenom"/> </span>
                         <br />
@@ -32,6 +33,8 @@
             </nav>
         </div>
     </div>
+    <br />
+    <br />
 
     <script src="${pageContext.request.contextPath}/JS/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
