@@ -3,6 +3,7 @@ package org.val.win.webapp.action;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.interceptor.SessionAware;
+import org.val.win.helper.Sha2;
 import org.val.win.model.bean.Utilisateur;
 import org.val.win.service.P7Service;
 import org.val.win.service.P7ServiceImplService;
@@ -111,6 +112,7 @@ public class GestionLoginAction extends ActionSupport implements SessionAware {
     public String doLogin() {
         String vResult = ActionSupport.INPUT;
         if (!StringUtils.isAllEmpty(login, password)) {
+            password = Sha2.getSHA512(password);
             utilisateur = port.utilisateurLogin(login, password);
             // Ajout de l'utilisateur en session
             this.session.put("user", utilisateur);

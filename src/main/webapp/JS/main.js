@@ -3,6 +3,7 @@ function getListOuvrageAjax() {
     jQuery.post(
         url,
         function (data) {
+            console.log(data);
             var $listOuvrage = jQuery("#listOuvrage");
             $listOuvrage.empty();
             jQuery.each(data, function (key, val) {
