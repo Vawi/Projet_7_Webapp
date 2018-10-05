@@ -112,8 +112,8 @@ public class GestionLoginAction extends ActionSupport implements SessionAware {
     public String doLogin() {
         String vResult = ActionSupport.INPUT;
         if (!StringUtils.isAllEmpty(login, password)) {
-            password = Sha2.getSHA512(password);
-            utilisateur = port.utilisateurLogin(login, password);
+            String passwordSha = Sha2.getSHA512(password);
+            utilisateur = port.utilisateurLogin(login, passwordSha);
             // Ajout de l'utilisateur en session
             this.session.put("user", utilisateur);
             this.session.put("idUtilisateur", utilisateur.getIdUtilisateur());

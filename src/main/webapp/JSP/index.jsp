@@ -9,21 +9,24 @@
 
 <body>
 
+    <span id="user" style="display: none;"><s:property value ="#session.check" /></span>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg">
-                <ul id="listOuvrage">
-                    <li >
-                        <em> ouvrage </em>
-                    </li>
-                </ul>
+                <table id="listOuvrage" class="display" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>nomOuvrage</th>
+                        <th>auteur</th>
+                        <th>nombreDispo</th>
+                    </tr>
+                    </thead>
+                </table>
             </div>
             <div class="col-lg">
                 Information de la bibliotheque
             </div>
-            <s:if test="#session.check == 'true'">
-                <!-- Condition pour lancer la recherche d'emprunt dès que l'utilisateur se connecte -->
-            </s:if>
             <div class="col-lg">
                 <ul id="listEmprunt">
                     <li >
@@ -36,14 +39,26 @@
 
 
     <script>
-        $( document ).ready(function() {
-            getListOuvrageAjax();
-        });
-        $( document ).ready(function() {
+        $(document).ready(function() {
+            $('#listOuvrage').DataTable( {
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json" },
+                "bServerSide": true,
+                "sAjaxSource": "listOuvrageAjax.action",
+                "bProcessing": true,
+                "sPaginationType": "full_numbers",
+                "bJQueryUI": true
+            } );
+        } );
+        if (user.text == true) {
             getListEmpruntUtilAjax();
-        });
+        }
     </script>
 
 </body>
+
+<script src=" https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" rel="stylesheet" />
 
 </html>
