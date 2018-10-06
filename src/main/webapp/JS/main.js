@@ -8,8 +8,10 @@ function getListOuvrageAjax() {
             $listOuvrage.empty();
             jQuery.each(data, function (key, val) {
                 $listOuvrage.append(
-                    jQuery("<li>")
+                    jQuery("<th>")
                         .append(val.nomOuvrage)
+                        .append(val.auteur)
+                        .append(val.nombreDispo)
                 );
             });
         })

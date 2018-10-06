@@ -27,13 +27,6 @@
             <div class="col-lg">
                 Information de la bibliotheque
             </div>
-            <div class="col-lg">
-                <ul id="listEmprunt">
-                    <li >
-                        <em> Emprunt de l'utilisateur </em>
-                    </li>
-                </ul>
-            </div>
         </div>
     </div>
 
@@ -41,8 +34,6 @@
     <script>
         $(document).ready(function() {
             $('#listOuvrage').DataTable( {
-                "language": {
-                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json" },
                 "bServerSide": true,
                 "sAjaxSource": "listOuvrageAjax.action",
                 "bProcessing": true,
@@ -50,9 +41,6 @@
                 "bJQueryUI": true
             } );
         } );
-        if (user.text == true) {
-            getListEmpruntUtilAjax();
-        }
     </script>
 
 </body>
