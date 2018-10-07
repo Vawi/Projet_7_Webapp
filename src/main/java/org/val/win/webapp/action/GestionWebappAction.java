@@ -11,6 +11,7 @@ import org.val.win.service.P7ServiceImplService;
 
 import javax.xml.namespace.QName;
 import java.net.URL;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -50,6 +51,8 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
     private Ouvrage ouvrage;
 
     private Emprunt emprunt;
+
+    private Integer id;
 
 
     // ----- Eléments en sortie
@@ -140,5 +143,22 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
             }
             return vResult;
         }
+    }
+
+    /**
+     * Action affichant les détails d'un {@link Utilisateur}
+     * @return success / error
+     */
+    public String doDetailUtilisateur() {
+        if (id == null) {
+            this.addActionError(getText("error.utilisateur.missing.id"));
+        } else {
+            try {
+                utilisateur = (Utilisateur) session.get("user");;
+            } catch (Exception pE) {
+                this.addActionError(getText("error.utilisateur.notfound", Collections.singletonList(id)));
+            }
+        }
+        return ActionSupport.SUCCESS;
     }
 }

@@ -8,45 +8,35 @@
 </head>
 
 <body>
+<br />
+<br />
+<br />
+<br />
 
-    <span id="user" style="display: none;"><s:property value ="#session.check" /></span>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="col-lg-4">
+        </div>
+        <div class="col-lg-4">
+            <legend> Site de reference de la bibliotheque </legend>
+            <br />
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg">
-                <table id="listOuvrage" class="display" style="width:100%">
-                    <thead>
-                    <tr>
-                        <th>nomOuvrage</th>
-                        <th>auteur</th>
-                        <th>nombreDispo</th>
-                    </tr>
-                    </thead>
-                </table>
-            </div>
-            <div class="col-lg">
-                Information de la bibliotheque
-            </div>
+            <p class="lead">Bienvenue le site de referencement d'ouvrage de la bibliotheque,
+                vous pouvez consulter la liste d'ouvrage de la bibliotheque dont les ouvrages disponible.
+                De plus, une fois connectez vous pourrez consulter vos emprunts en cours et les prolongers une fois
+            </p>
+        </div>
+        <div class="col-lg-4">
         </div>
     </div>
+</div>
 
 
-    <script>
-        $(document).ready(function() {
-            $('#listOuvrage').DataTable( {
-                "bServerSide": true,
-                "sAjaxSource": "listOuvrageAjax.action",
-                "bProcessing": true,
-                "sPaginationType": "full_numbers",
-                "bJQueryUI": true
-            } );
-        } );
-    </script>
+<br/>
+<br/>
 
 </body>
 
-<script src=" https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-<link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+
 
 </html>

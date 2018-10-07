@@ -52,6 +52,18 @@
             <result>/JSP/index.jsp</result>
         </action>
 
+        <action name="ouvrage">
+            <result>/JSP/ouvrage/ouvrage.jsp</result>
+        </action>
+
+        <!-- Action affichant le détail d'un utilisateur -->
+
+        <action name="utilisateur_detail"
+                class="org.val.win.webapp.action.GestionWebappAction"
+                method="doDetailUtilisateur">
+            <result>/JSP/utilisateur/detail.jsp</result>
+        </action>
+
         <!-- Actions Login/Logout -->
 
         <action name="login" class="org.val.win.webapp.action.GestionLoginAction" method="doLogin">
