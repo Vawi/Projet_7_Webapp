@@ -11,6 +11,9 @@
     <div class="container">
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">La Bibliotheque</a>
+                </div>
                 <ul class="nav navbar-nav">
                     <li> <a href="index.action">Accueil</a> </li>
                     <li> <a href="ouvrage.action">Liste d'ouvrage</a> </li>
@@ -39,6 +42,8 @@
     <br />
 
 </body>
+
+<script src="${pageContext.request.contextPath}/JS/main.js"></script>
 
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
