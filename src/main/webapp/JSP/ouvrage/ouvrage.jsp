@@ -20,7 +20,7 @@
                 </a>
             </h5>
             <br/>
-            <h5> Pouvoir voir l'intégralité des ouvrages de la bibliotheque, cliquez ici :
+            <h5> Pour voir l'intégralité des ouvrages de la bibliotheque, cliquez ici :
                 <a href="<s:url namespace="/" action="listOuvrage"></s:url>">
                     <button type="button" class="btn btn-info"> <span> Ouvrage </span></button>
                 </a>
