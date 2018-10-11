@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/CSS/style.css"/>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li> <a href="index.action">Accueil</a> </li>
-                    <li> <a href="ouvrage.action">Liste d'ouvrage</a> </li>
+                    <li> <a href="listOuvrage.action">Liste d'ouvrage</a> </li>
                     <s:if test="#session.check == 'true'">
                         <li> <a href="utilisateur_detail.action"> Detail et Emprunt </a> </li>
                     </s:if>

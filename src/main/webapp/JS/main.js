@@ -38,6 +38,7 @@ function getListEmpruntUtilAjax() {
             jQuery.each(data, function (key, val) {
                 $listEmpruntUtil.append(
                     jQuery("<li>")
+                        .append(val.idOuvrage)
                         .append(val.dateDebut)
                         .append(val.dateFin)
 
@@ -57,7 +58,7 @@ function paginationOuvrage() {
         .success(function(data){
             items = data;
         });
-    
+
     var pager = {};
     pager.items = JSON.parse(items);
     pager.itemsPerPage = 3;

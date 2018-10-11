@@ -61,8 +61,6 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
 
     private List<Ouvrage> listOuvrage;
 
-    private List<Ouvrage> listOuvrageDispo;
-
 
     // ==================== Getters/Setters ====================
 
@@ -82,14 +80,6 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
         this.ouvrage = ouvrage;
     }
 
-    public List<Ouvrage> getListOuvrageDispo() {
-        return listOuvrageDispo;
-    }
-
-    public void setListOuvrageDispo(List<Ouvrage> listOuvrageDispo) {
-        this.listOuvrageDispo = listOuvrageDispo;
-    }
-
     public List<Ouvrage> getListOuvrage() {
         return listOuvrage;
     }
@@ -104,6 +94,14 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
 
     public void setUtilisateur(Utilisateur utilisateur) {
         this.utilisateur = utilisateur;
+    }
+
+    public List<Emprunt> getListEmpruntUtil() {
+        return listEmpruntUtil;
+    }
+
+    public void setListEmpruntUtil(List<Emprunt> listEmpruntUtil) {
+        this.listEmpruntUtil = listEmpruntUtil;
     }
 
     // ==================== Méthodes ====================
@@ -125,7 +123,7 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
     }
 
     public String doListOuvrageDispo() {
-        listOuvrageDispo = port.getListDispo().getItem();
+        listOuvrage = port.getListDispo().getItem();
         return ActionSupport.SUCCESS;
     }
 

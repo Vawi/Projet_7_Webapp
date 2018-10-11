@@ -1,16 +1,19 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: v.w
-  Date: 17/09/2018
-  Time: 16:38
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <head>
+        <%@ include file="_include/header.jsp"%>
+    </head>
+    <meta charset="UTF-8">
+    <title>Bibliotheque</title>
 </head>
-<body>
 
+<body>
+<h2>Une erreur s'est produite</h2>
+
+<s:actionerror />
 </body>
 </html>

@@ -10,11 +10,6 @@
 
 <body>
 
-</body>
-
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/CSS/styles.css"/>
-</html>
-
 <div class="row">
     <div class="col-lg-12">
         <div class="col-lg-4">
@@ -38,3 +33,8 @@
         </div>
     </div>
 </div>
+
+</body>
+
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/CSS/styles.css"/>
+</html>

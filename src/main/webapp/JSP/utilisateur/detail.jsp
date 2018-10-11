@@ -11,9 +11,9 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <div class="col-lg-4">
+        <div class="col-lg-2">
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-2">
             <legend> Detail de l'utilisateur : </legend>
             <br />
             <br />
@@ -29,40 +29,49 @@
                 </ul>
             </div>
         </div>
-        <div class="col-lg-4">
-        </div>
-    </div>
-</div>
-
-<br/>
-<br/>
-
-<div class="row">
-    <div class="col-lg-12">
-        <div class="col-lg-4">
-        </div>
-        <div class=col-lg-4">
+        <div class="col-lg-6">
             <legend> Emprunt de l'utilisateur : </legend>
-            <div class="description">
-                <ul id="listEmprunt">
-                    <li >
-                        <em> Emprunt de l'utilisateur </em>
-                    </li>
-                </ul>
-            </div>
+            <table id="listEmpruntUtil" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Nom de l'ouvrage</th>
+                    <th>date du début de l'emprunt</th>
+                    <th>date de fin de l'emprunt</th>
+                    <th>Etat de l'emprunt</th>
+                </tr>
+                </thead>
+                <tbody>
+                <s:iterator value="listEmpruntUtil">
+                    <tr>
+                        <td><s:property value ="idOuvrage" /></td>
+                        <td><s:property value ="dateDebut" /></td>
+                        <td><s:property value ="dateFin" /></td>
+                        <td><s:property value ="etat"/></td>
+                    </tr>
+                </s:iterator>
+                </tbody>
+            </table>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-2">
         </div>
     </div>
 </div>
 
-<script>
-    $( document ).ready(function() {
-        getListEmpruntUtilAjax();
-    })
-</script>
-
-
+<br/>
+<br/>
 
 </body>
+<script>
+    $(document).ready(function() {
+        $('#listEmpruntUtil').DataTable( {
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json" }
+            }
+        );
+    });
+</script>
+<script src="${pageContext.request.contextPath}/JS/main.js"></script>
+<script src=" https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+<link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet" />
 </html>

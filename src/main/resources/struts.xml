@@ -15,23 +15,6 @@
             </result>
         </global-results>
 
-        <!-- Action listant les topos -->
-        <action name="listOuvrageAjax"
-                class="org.val.win.webapp.action.GestionWebappAction"
-                method="doListOuvrage">
-            <result name="success" type="json">
-                <param name="root">listOuvrage</param>
-            </result>
-        </action>
-
-        <action name="listEmpruntUtilAjax"
-                class="org.val.win.webapp.action.GestionWebappAction"
-                method="doListEmpruntUtil">
-            <result name="success" type="json">
-                <param name="root">listEmpruntUtil</param>
-            </result>
-        </action>
-
     </package>
 
     <package name="default" extends="struts-default">
@@ -52,15 +35,30 @@
             <result>/JSP/index.jsp</result>
         </action>
 
-        <action name="ouvrage">
-            <result>/JSP/ouvrage/ouvrage.jsp</result>
-        </action>
-
         <!-- Action affichant le détail d'un utilisateur -->
 
         <action name="utilisateur_detail"
                 class="org.val.win.webapp.action.GestionWebappAction"
                 method="doDetailUtilisateur">
+            <result>/JSP/utilisateur/detail.jsp</result>
+        </action>
+
+        <!-- Action listant les topos -->
+        <action name="listOuvrage"
+                class="org.val.win.webapp.action.GestionWebappAction"
+                method="doListOuvrage">
+            <result>/JSP/ouvrage/ouvrage.jsp</result>
+        </action>
+
+        <action name="listOuvrageDispo"
+                class="org.val.win.webapp.action.GestionWebappAction"
+                method="doListOuvrageDispo">
+            <result>/JSP/ouvrage/ouvrage.jsp</result>
+        </action>
+
+        <action name="listEmpruntUtil"
+                class="org.val.win.webapp.action.GestionWebappAction"
+                method="doListEmpruntUtil">
             <result>/JSP/utilisateur/detail.jsp</result>
         </action>
 
