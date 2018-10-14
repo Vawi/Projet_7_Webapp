@@ -107,16 +107,6 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
     // ==================== Méthodes ====================
 
 
-    /**
-     * Action listant les sites
-     * @return liste de sites
-     */
-    public String doListEmpruntUtil() {
-        utilisateur = (Utilisateur) session.get("user");
-        listEmpruntUtil = port.getListEmpruntUtilisateur(utilisateur).getItem();
-        return ActionSupport.SUCCESS;
-    }
-
     public String doListOuvrage() {
         listOuvrage = port.getListOuvrage().getItem();
         return ActionSupport.SUCCESS;
@@ -148,15 +138,8 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
      * @return success / error
      */
     public String doDetailUtilisateur() {
-        if (id == null) {
-            this.addActionError(getText("error.utilisateur.missing.id"));
-        } else {
-            try {
-                utilisateur = (Utilisateur) session.get("user");;
-            } catch (Exception pE) {
-                this.addActionError(getText("error.utilisateur.notfound", Collections.singletonList(id)));
-            }
-        }
+        utilisateur = (Utilisateur) session.get("user");
+        listEmpruntUtil = port.getListEmpruntUtilisateur(utilisateur).getItem();
         return ActionSupport.SUCCESS;
     }
 }

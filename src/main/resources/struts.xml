@@ -57,13 +57,6 @@
             <result>/JSP/ouvrage/ouvrage.jsp</result>
         </action>
 
-        <!-- Action listant les emprunts d'un utilisateur -->
-        <action name="listEmpruntUtil"
-                class="org.val.win.webapp.action.GestionWebappAction"
-                method="doListEmpruntUtil">
-            <result>/JSP/utilisateur/detail.jsp</result>
-        </action>
-
         <!-- Actions Login/Logout -->
 
         <action name="login" class="org.val.win.webapp.action.GestionLoginAction" method="doLogin">
