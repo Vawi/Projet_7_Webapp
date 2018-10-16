@@ -49,15 +49,24 @@
                     <span id="spanIdOuvrage" style="display: none;"><s:property value ="listEmpruntUtil.IdOuvrage" /></span>
                     <tr>
                         <td><s:property value ="ouvrage.nomOuvrage" /></td>
-                        <td><s:property value ="dateDebut" /></td>
-                        <td><s:property value ="dateFin" /></td>
+                        <td><s:property value ="dateDebut" /><s:date name="dateDebut" format="dd/MM/yyyy" /></td>
+                        <td><s:property value ="dateFin" /><s:date name="dateFin" format="dd/MM/yyyy" /></td>
                         <td><s:property value ="etat"/></td>
-                        <td><a href="<s:url namespace="/" action="prolongerEmprunt">
+                        <s:set var="dateDebut" value="%{new java.time.LocalDate()}"/>
+                        <s:set var="dateFin" value="%{new java.time.LocalDate()}"/>
+                        <s:property value="%{#dateDebut}"/>
+                        <s:property value="%{#dateFin}"/>
+                        <s:if test="%{@org.val.win.helper.CompareDate@compareDate(#dateDebut, #dateFin)}">
+                            <td><a href="<s:url namespace="/" action="prolongerEmprunt">
                                          <s:param name="idEmprunt" value="%{idEmprunt}" />
                                          <s:param name="idOuvrage" value="%{idOuvrage}"/>
                                      </s:url>">
-                            <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-eye-open"></span></button>
-                        </a> </td>
+                                <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-eye-open"></span></button>
+                            </a> </td>
+                        </s:if>
+                        <s:else>
+                            Emprunt deja prolongé un fois
+                        </s:else>
                     </tr>
                 </s:iterator>
                 </tbody>
