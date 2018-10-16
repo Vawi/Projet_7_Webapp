@@ -61,11 +61,13 @@
                                          <s:param name="idEmprunt" value="%{idEmprunt}" />
                                          <s:param name="idOuvrage" value="%{idOuvrage}"/>
                                      </s:url>">
-                                <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-eye-open"></span></button>
+                                <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-ok"></span></button>
                             </a> </td>
                         </s:if>
                         <s:else>
-                            Emprunt deja prolongé un fois
+                            <td>
+                                <button type="button" class="btn btn-danger"> <span class="glyphicon glyphicon-remove"></span></button>
+                            </td>
                         </s:else>
                     </tr>
                 </s:iterator>

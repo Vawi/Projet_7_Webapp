@@ -6,10 +6,10 @@ import java.time.Period;
 public class CompareDate {
 
     public static boolean compareDate(LocalDate currentDate, LocalDate futureDate) {
-        boolean flag = false;
+        boolean flag = true;
         Period p = Period.between(currentDate, futureDate);
-        if (p.getMonths() <= 1) {
-            flag = true;
+        if (p.getMonths() >= 2) {
+            flag = false;
         }
         return flag;
     }
