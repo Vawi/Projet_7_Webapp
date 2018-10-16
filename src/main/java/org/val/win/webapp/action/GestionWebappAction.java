@@ -54,6 +54,10 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
 
     private Integer id;
 
+    private Integer idOuvrage;
+
+    private Integer idEmprunt;
+
 
     // ----- Eléments en sortie
 
@@ -63,6 +67,22 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
 
 
     // ==================== Getters/Setters ====================
+
+    public Integer getIdOuvrage() {
+        return idOuvrage;
+    }
+
+    public void setIdOuvrage(Integer idOuvrage) {
+        this.idOuvrage = idOuvrage;
+    }
+
+    public Integer getIdEmprunt() {
+        return idEmprunt;
+    }
+
+    public void setIdEmprunt(Integer idEmprunt) {
+        this.idEmprunt = idEmprunt;
+    }
 
     public Emprunt getEmprunt() {
         return emprunt;
@@ -118,7 +138,8 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
     }
 
     public String prolongerEmprunt() {
-        // emprunt =
+        emprunt.setIdEmprunt(idEmprunt);
+        emprunt.setIdOuvrage(idOuvrage);
         utilisateur = (Utilisateur) session.get("user");
         if(session.get("user") == null){
             return ActionSupport.LOGIN;

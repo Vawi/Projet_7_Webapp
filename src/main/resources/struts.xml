@@ -57,6 +57,16 @@
             <result>/JSP/ouvrage/ouvrage.jsp</result>
         </action>
 
+        <action name="prolongerEmprunt"
+                class="org.val.win.webapp.action.GestionWebappAction"
+                method="prolongerEmprunt">
+            <result name="success" type="redirectAction">
+                <param name="idEmprunt">${emprunt.idEmprunt}</param>
+                <param name="idOuvrage">${emprunt.idOuvrage}</param>
+            </result>
+            <result name="login" type="redirectAction">login</result>
+        </action>
+
         <!-- Actions Login/Logout -->
 
         <action name="login" class="org.val.win.webapp.action.GestionLoginAction" method="doLogin">

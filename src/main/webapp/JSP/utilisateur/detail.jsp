@@ -41,6 +41,7 @@
                     <th>date du début de l'emprunt</th>
                     <th>date de fin de l'emprunt</th>
                     <th>Etat de l'emprunt</th>
+                    <th>Prolongation</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -51,6 +52,12 @@
                         <td><s:property value ="dateDebut" /></td>
                         <td><s:property value ="dateFin" /></td>
                         <td><s:property value ="etat"/></td>
+                        <td><a href="<s:url namespace="/" action="prolongerEmprunt">
+                                         <s:param name="idEmprunt" value="%{idEmprunt}" />
+                                         <s:param name="idOuvrage" value="%{idOuvrage}"/>
+                                     </s:url>">
+                            <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-eye-open"></span></button>
+                        </a> </td>
                     </tr>
                 </s:iterator>
                 </tbody>
