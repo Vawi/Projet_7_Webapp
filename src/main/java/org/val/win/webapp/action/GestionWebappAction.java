@@ -161,6 +161,14 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
     public String doDetailUtilisateur() {
         utilisateur = (Utilisateur) session.get("user");
         listEmpruntUtil = port.getListEmpruntUtilisateur(utilisateur).getItem();
+        listOuvrage = port.getListOuvrage().getItem();
+        for(Emprunt emprunt:listEmpruntUtil){
+            for(Ouvrage ouvrage:listOuvrage){
+                if(emprunt.getIdOuvrage() == ouvrage.getIdOuvrage()){
+                    emprunt.setNomOuvrage(ouvrage.getNomOuvrage());
+                }
+            }
+        }
         return ActionSupport.SUCCESS;
     }
 }

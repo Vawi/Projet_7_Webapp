@@ -1,10 +1,7 @@
 
 package org.val.win.model.bean;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
@@ -51,6 +48,10 @@ public class Emprunt {
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dateFin;
     protected String etat;
+    @XmlTransient
+    protected String nomOuvrage;
+    @XmlTransient
+    protected Boolean prolongeable;
 
     /**
      * Obtient la valeur de la propriété idEmprunt.
@@ -196,4 +197,51 @@ public class Emprunt {
         this.etat = value;
     }
 
+    /**
+     * Définit la valeur de la propriété nomOuvrage.
+     *
+     * @return
+     *     possible object is
+     *     {@link String }
+     *
+     */
+    public String getNomOuvrage() {
+        return nomOuvrage;
+    }
+
+    /**
+     * Définit la valeur de la propriété nomOuvrage.
+     *
+     * @param nomOuvrage
+     *     allowed object is
+     *     {@link String }
+     *
+     */
+    public void setNomOuvrage(String nomOuvrage) {
+        this.nomOuvrage = nomOuvrage;
+    }
+
+    /**
+     * Définit la valeur de la propriété prolongeable.
+     *
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *
+     */
+    public Boolean getProlongeable() {
+        return prolongeable;
+    }
+
+    /**
+     * Définit la valeur de la propriété prolongeable.
+     *
+     * @param prolongeable
+     *     allowed object is
+     *     {@link Boolean }
+     *
+     */
+    public void setProlongeable(Boolean prolongeable) {
+        this.prolongeable = prolongeable;
+    }
 }

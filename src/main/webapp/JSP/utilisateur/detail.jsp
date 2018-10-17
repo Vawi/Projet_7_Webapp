@@ -7,9 +7,6 @@
     <%@ include file="../_include/header.jsp"%>
 </head>
 
-<s:debug>
-
-</s:debug>
 <body>
 
 <div class="row">
@@ -48,7 +45,7 @@
                 <s:iterator value="listEmpruntUtil">
                     <span id="spanIdOuvrage" style="display: none;"><s:property value ="listEmpruntUtil.IdOuvrage" /></span>
                     <tr>
-                        <td><s:property value ="ouvrage.nomOuvrage" /></td>
+                        <td><s:property value ="nomOuvrage" /></td>
                         <td><s:property value ="dateDebut" /><s:date name="dateDebut" format="dd/MM/yyyy" /></td>
                         <td><s:property value ="dateFin" /><s:date name="dateFin" format="dd/MM/yyyy" /></td>
                         <td><s:property value ="etat"/></td>
