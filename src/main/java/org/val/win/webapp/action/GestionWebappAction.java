@@ -3,6 +3,7 @@ package org.val.win.webapp.action;
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.SessionAware;
+import org.val.win.helper.CompareDate;
 import org.val.win.model.bean.Emprunt;
 import org.val.win.model.bean.Ouvrage;
 import org.val.win.model.bean.Utilisateur;
@@ -163,6 +164,7 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
         listEmpruntUtil = port.getListEmpruntUtilisateur(utilisateur).getItem();
         listOuvrage = port.getListOuvrage().getItem();
         for(Emprunt emprunt:listEmpruntUtil){
+            emprunt.setProlongeable(CompareDate.compareDate(emprunt.getDateDebut(), emprunt.getDateFin()));
             for(Ouvrage ouvrage:listOuvrage){
                 if(emprunt.getIdOuvrage() == ouvrage.getIdOuvrage()){
                     emprunt.setNomOuvrage(ouvrage.getNomOuvrage());

@@ -49,11 +49,7 @@
                         <td><s:property value ="dateDebut" /><s:date name="dateDebut" format="dd/MM/yyyy" /></td>
                         <td><s:property value ="dateFin" /><s:date name="dateFin" format="dd/MM/yyyy" /></td>
                         <td><s:property value ="etat"/></td>
-                        <s:set var="dateDebut" value="%{new java.time.LocalDate()}"/>
-                        <s:set var="dateFin" value="%{new java.time.LocalDate()}"/>
-                        <s:property value="%{#dateDebut}"/>
-                        <s:property value="%{#dateFin}"/>
-                        <s:if test="%{@org.val.win.helper.CompareDate@compareDate(#dateDebut, #dateFin)}">
+                        <s:if test="prolongeable == 'true'">
                             <td><a href="<s:url namespace="/" action="prolongerEmprunt">
                                          <s:param name="idEmprunt" value="%{idEmprunt}" />
                                          <s:param name="idOuvrage" value="%{idOuvrage}"/>
