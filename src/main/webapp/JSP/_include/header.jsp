@@ -8,29 +8,29 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/CSS/style.css"/>
 </head>
 
-<body>
+<header>
+
+    <body>
     <div class="container">
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">La Bibliotheque</a>
+                    <a class="navbar-brand" >La Bibliotheque</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li> <a href="index.action">Accueil</a> </li>
                     <li> <a href="listOuvrage.action">Liste d'ouvrage</a> </li>
                     <s:if test="#session.check == 'true'">
-                        <li> <a href="utilisateur_detail.action"> Detail et Emprunt </a> </li>
+                        <li> <a href="utilisateur_detail.action">Details et Emprunts </a> </li>
                     </s:if>
                 </ul>
                 <s:if test="#session.check == 'true'">
-                    <span>Vous etes connecté <s:property value="#session.user.prenom"/> </span>
-                    <br />
-                    <s:a action="logout" theme="simple">
+                    <s:a action="logout" class="navbar-form navbar-right inline-form" theme="simple">
                         <span> Deconnection </span>
                     </s:a>
                 </s:if>
                 <s:else >
-                    <s:form  action="login" class="form-inline my-2 my-lg-0" theme="simple">
+                    <s:form action="login" class="navbar-form navbar-right inline-form" theme="simple">
                         <s:textfield name="login" label="Identifiant" requiredLabel="true" class="input-sm form-control" theme="simple"/>
                         <s:password name="password" label="Mot de passe" requiredLabel="true" type="password" class="input-sm form-control" theme="simple"/>
                         <s:submit value="Connexion" class="btn btn-primary btn-sm" type="submit" theme="simple"/>
@@ -39,10 +39,9 @@
             </div>
         </nav>
     </div>
-    <br />
-    <br />
+    </body>
 
-</body>
+</header>
 
 <script src="${pageContext.request.contextPath}/JS/main.js"></script>
 
