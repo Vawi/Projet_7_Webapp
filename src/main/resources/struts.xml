@@ -61,8 +61,8 @@
                 class="org.val.win.webapp.action.GestionWebappAction"
                 method="prolongerEmprunt">
             <result name="success" type="redirectAction">
+                <param name="actionName">utilisateur_detail</param>
                 <param name="idEmprunt">${emprunt.idEmprunt}</param>
-                <param name="idOuvrage">${emprunt.idOuvrage}</param>
             </result>
             <result name="login" type="redirectAction">login</result>
         </action>

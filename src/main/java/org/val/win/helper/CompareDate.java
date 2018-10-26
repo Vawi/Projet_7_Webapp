@@ -6,10 +6,10 @@ import java.time.Period;
 
 public class CompareDate {
 
-    public static boolean compareDate(XMLGregorianCalendar currentDate, XMLGregorianCalendar futureDate) {
+    public static boolean compareDate(XMLGregorianCalendar debutEmprunt, XMLGregorianCalendar finEmprunt) {
 
-        LocalDate dateDebut = currentDate.toGregorianCalendar().toZonedDateTime().toLocalDate();
-        LocalDate dateFin = futureDate.toGregorianCalendar().toZonedDateTime().toLocalDate();
+        LocalDate dateDebut = debutEmprunt.toGregorianCalendar().toZonedDateTime().toLocalDate();
+        LocalDate dateFin = finEmprunt.toGregorianCalendar().toZonedDateTime().toLocalDate();
 
         boolean flag = true;
         Period p = Period.between(dateDebut, dateFin);

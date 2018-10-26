@@ -10,9 +10,9 @@ import org.val.win.model.bean.Utilisateur;
 import org.val.win.service.P7Service;
 import org.val.win.service.P7ServiceImplService;
 
+import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.namespace.QName;
 import java.net.URL;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -53,11 +53,17 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
 
     private Emprunt emprunt;
 
-    private Integer id;
+    private Integer idUtilisateur;
 
     private Integer idOuvrage;
 
     private Integer idEmprunt;
+
+    private XMLGregorianCalendar dateDebut;
+
+    private XMLGregorianCalendar dateFin;
+
+    private String etat;
 
 
     // ----- Eléments en sortie
@@ -68,6 +74,22 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
 
 
     // ==================== Getters/Setters ====================
+
+    public String getEtat() {
+        return etat;
+    }
+
+    public void setEtat(String etat) {
+        this.etat = etat;
+    }
+
+    public Integer getIdUtilisateur() {
+        return idUtilisateur;
+    }
+
+    public void setIdUtilisateur(Integer idUtilisateur) {
+        this.idUtilisateur = idUtilisateur;
+    }
 
     public Integer getIdOuvrage() {
         return idOuvrage;
@@ -125,6 +147,22 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
         this.listEmpruntUtil = listEmpruntUtil;
     }
 
+    public XMLGregorianCalendar getDateDebut() {
+        return dateDebut;
+    }
+
+    public void setDateDebut(XMLGregorianCalendar dateDebut) {
+        this.dateDebut = dateDebut;
+    }
+
+    public XMLGregorianCalendar getDateFin() {
+        return dateFin;
+    }
+
+    public void setDateFin(XMLGregorianCalendar dateFin) {
+        this.dateFin = dateFin;
+    }
+
     // ==================== Méthodes ====================
 
 
@@ -139,17 +177,17 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
     }
 
     public String prolongerEmprunt() {
-        emprunt.setIdEmprunt(idEmprunt);
-        emprunt.setIdOuvrage(idOuvrage);
+        Emprunt pEmprunt = new Emprunt();
+        pEmprunt.setIdEmprunt(idEmprunt);
         utilisateur = (Utilisateur) session.get("user");
         if(session.get("user") == null){
-            return ActionSupport.LOGIN;
-        }
+            return ActionSupport.LOGIN; }
         else {
             String vResult = Action.INPUT;
             if (!this.hasErrors()) {
-                    port.prolongationEmprunt(emprunt);
-                    vResult = ActionSupport.SUCCESS;
+                port.prolongationEmprunt(pEmprunt);
+                vResult = ActionSupport.SUCCESS;
+                this.addActionMessage("Emprunt prolongé avec succes");
             }
             return vResult;
         }
@@ -165,6 +203,7 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
         listOuvrage = port.getListOuvrage().getItem();
         for(Emprunt emprunt:listEmpruntUtil){
             emprunt.setProlongeable(CompareDate.compareDate(emprunt.getDateDebut(), emprunt.getDateFin()));
+            System.out.println(emprunt.getProlongeable());
             for(Ouvrage ouvrage:listOuvrage){
                 if(emprunt.getIdOuvrage() == ouvrage.getIdOuvrage()){
                     emprunt.setNomOuvrage(ouvrage.getNomOuvrage());
@@ -173,4 +212,5 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
         }
         return ActionSupport.SUCCESS;
     }
+
 }

@@ -26,7 +26,7 @@
                 </ul>
                 <s:if test="#session.check == 'true'">
                     <s:a action="logout" class="navbar-form navbar-right inline-form" theme="simple">
-                        <span> Deconnection </span>
+                        <button type="button" class="btn btn-info"> <span>Deconnection</span></button>
                     </s:a>
                 </s:if>
                 <s:else >

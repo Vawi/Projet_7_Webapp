@@ -46,20 +46,18 @@
                     <span id="spanIdOuvrage" style="display: none;"><s:property value ="listEmpruntUtil.IdOuvrage" /></span>
                     <tr>
                         <td><s:property value ="nomOuvrage" /></td>
-                        <td><s:property value ="dateDebut" /><s:date name="dateDebut" format="dd/MM/yyyy" /></td>
-                        <td><s:property value ="dateFin" /><s:date name="dateFin" format="dd/MM/yyyy" /></td>
+                        <td><s:property value ="dateDebut" /></td>
+                        <td><s:property value ="dateFin" /></td>
                         <td><s:property value ="etat"/></td>
-                        <s:if test="prolongeable == 'true'">
-                            <td><a href="<s:url namespace="/" action="prolongerEmprunt">
-                                         <s:param name="idEmprunt" value="%{idEmprunt}" />
-                                         <s:param name="idOuvrage" value="%{idOuvrage}"/>
-                                     </s:url>">
+                        <s:if test="prolongeable">
+                            <td><s:a action="prolongerEmprunt">
+                                <s:param name="idEmprunt" value="%{idEmprunt}" />
                                 <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-ok"></span></button>
-                            </a> </td>
+                            </s:a></td>
                         </s:if>
                         <s:else>
                             <td>
-                                <button type="button" class="btn btn-danger"> <span class="glyphicon glyphicon-remove"></span></button>
+                                <span class="glyphicon glyphicon-remove"></span>
                             </td>
                         </s:else>
                     </tr>
