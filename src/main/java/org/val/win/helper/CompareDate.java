@@ -13,7 +13,7 @@ public class CompareDate {
 
         boolean flag = true;
         Period p = Period.between(dateDebut, dateFin);
-        if (p.getDays() > 56) {
+        if (p.getMonths() > 2) {
             flag = false;
         }
         return flag;
