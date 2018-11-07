@@ -2,6 +2,8 @@ package org.val.win.webapp.action;
 
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionSupport;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.struts2.interceptor.SessionAware;
 import org.val.win.helper.CompareDate;
 import org.val.win.model.bean.Emprunt;
@@ -44,9 +46,6 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
     // ----- Paramètres en entrée
 
 
-    /**
-     * utilisateur
-     */
     private Utilisateur utilisateur;
 
     private Ouvrage ouvrage;
@@ -166,16 +165,37 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
     // ==================== Méthodes ====================
 
 
+    /**
+     * Action récupérant une liste d'ouvrage
+     * @return success
+     */
     public String doListOuvrage() {
-        listOuvrage = port.getListOuvrage().getItem();
+        utilisateur = (Utilisateur) session.get("user");
+        if (utilisateur.getPrenom() == null ){
+            utilisateur.setPrenom("anonymous");
+        }
+        listOuvrage = port.getListOuvrage(utilisateur).getItem();
         return ActionSupport.SUCCESS;
     }
 
+    /**
+     * Action récupérant une liste d'ouvrage disponible
+     * @return success
+     */
     public String doListOuvrageDispo() {
-        listOuvrage = port.getListDispo().getItem();
+        utilisateur = (Utilisateur) session.get("user");
+        if (utilisateur == null) {
+            Utilisateur utilisateur = new Utilisateur();
+            utilisateur.setPrenom("anonymous");
+        }
+        listOuvrage = port.getListDispo(utilisateur).getItem();
         return ActionSupport.SUCCESS;
     }
 
+    /**
+     * Action permettant de prolonger un emprunt
+     * @return success ou login
+     */
     public String prolongerEmprunt() {
         Emprunt pEmprunt = new Emprunt();
         pEmprunt.setIdEmprunt(idEmprunt);
@@ -185,7 +205,7 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
         else {
             String vResult = Action.INPUT;
             if (!this.hasErrors()) {
-                port.prolongationEmprunt(pEmprunt);
+                port.prolongationEmprunt(pEmprunt, utilisateur);
                 vResult = ActionSupport.SUCCESS;
                 this.addActionMessage("Emprunt prolongé avec succes");
             }
@@ -200,7 +220,7 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
     public String doDetailUtilisateur() {
         utilisateur = (Utilisateur) session.get("user");
         listEmpruntUtil = port.getListEmpruntUtilisateur(utilisateur).getItem();
-        listOuvrage = port.getListOuvrage().getItem();
+        listOuvrage = port.getListOuvrage(utilisateur).getItem();
         for(Emprunt emprunt:listEmpruntUtil){
             emprunt.setProlongeable(CompareDate.compareDate(emprunt.getDateDebut(), emprunt.getDateFin()));
             System.out.println(emprunt.getProlongeable());
