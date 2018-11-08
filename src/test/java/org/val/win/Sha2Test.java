@@ -1,12 +1,11 @@
 package org.val.win;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.val.win.helper.Sha2;
 
 public class Sha2Test {
 
-    String titi = "mdptest";
+    String titi = "chouchou32";
 
     @Test
     public void Sha512Test() {

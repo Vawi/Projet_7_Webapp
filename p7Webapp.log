@@ -1,0 +1,6 @@
+2018-11-07 11:09:34.367 [main] INFO  org.val.win.helper.CompareDate - La chaine de caractère : Toto a bien été cryptée
+2018-11-07 11:26:49.909 [main] INFO  org.val.win.helper.CompareDate - La chaine de caractère : merguez a bien été cryptée
+2018-11-07 17:28:46.875 [main] INFO  org.val.win.helper.CompareDate - La chaine de caractère : totoTutu a bien été cryptée
+2018-11-07 17:29:30.452 [main] INFO  org.val.win.helper.CompareDate - La chaine de caractère : alouichateau a bien été cryptée
+2018-11-07 17:29:52.322 [main] INFO  org.val.win.helper.CompareDate - La chaine de caractère : SuperSaucisse a bien été cryptée
+2018-11-07 17:30:16.839 [main] INFO  org.val.win.helper.CompareDate - La chaine de caractère : chouchou32 a bien été cryptée

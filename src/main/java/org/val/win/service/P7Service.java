@@ -101,8 +101,10 @@ public interface P7Service {
     @WebMethod
     @Action(input = "http://contract.service.win.val.org/P7Service/fermerEmpruntRequest", output = "http://contract.service.win.val.org/P7Service/fermerEmpruntResponse", fault = {@FaultAction(className = NotFoundException_Exception.class, value = "http://contract.service.win.val.org/P7Service/fermerEmprunt/Fault/NotFoundException")})
     public void fermerEmprunt(
-        @WebParam(partName = "arg0", name = "arg0")
-        Emprunt arg0
+            @WebParam(partName = "arg0", name = "arg0")
+            Utilisateur arg0,
+            @WebParam(partName = "arg1", name = "arg1")
+            Emprunt arg1
     ) throws NotFoundException_Exception;
 
     @WebMethod
