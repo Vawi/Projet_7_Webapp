@@ -45,6 +45,7 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
 
     // ----- Paramètres en entrée
 
+    private String pseudonyme;
 
     private Utilisateur utilisateur;
 
@@ -170,11 +171,12 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
      * @return success
      */
     public String doListOuvrage() {
-        utilisateur = (Utilisateur) session.get("user");
-        if (utilisateur.getPrenom() == null ){
-            utilisateur.setPrenom("anonymous");
+        if (session.get("user") == null) {
+            pseudonyme = "anonymous";
+        } else {
+            pseudonyme = (String) session.get("pseudonyme");
         }
-        listOuvrage = port.getListOuvrage(utilisateur).getItem();
+        listOuvrage = port.getListOuvrage(pseudonyme).getItem();
         return ActionSupport.SUCCESS;
     }
 
@@ -183,12 +185,12 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
      * @return success
      */
     public String doListOuvrageDispo() {
-        utilisateur = (Utilisateur) session.get("user");
-        if (utilisateur == null) {
-            Utilisateur utilisateur = new Utilisateur();
-            utilisateur.setPrenom("anonymous");
+        if (session.get("user") == null) {
+            pseudonyme = "anonymous";
+        } else {
+            pseudonyme = (String) session.get("pseudonyme");
         }
-        listOuvrage = port.getListDispo(utilisateur).getItem();
+        listOuvrage = port.getListDispo(pseudonyme).getItem();
         return ActionSupport.SUCCESS;
     }
 
@@ -200,12 +202,13 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
         Emprunt pEmprunt = new Emprunt();
         pEmprunt.setIdEmprunt(idEmprunt);
         utilisateur = (Utilisateur) session.get("user");
+        pseudonyme = (String) session.get("pseudonyme");
         if(session.get("user") == null){
             return ActionSupport.LOGIN; }
         else {
             String vResult = Action.INPUT;
             if (!this.hasErrors()) {
-                port.prolongationEmprunt(pEmprunt, utilisateur);
+                port.prolongationEmprunt(pEmprunt, pseudonyme);
                 vResult = ActionSupport.SUCCESS;
                 this.addActionMessage("Emprunt prolongé avec succes");
             }
@@ -220,7 +223,8 @@ public class GestionWebappAction extends ActionSupport implements SessionAware {
     public String doDetailUtilisateur() {
         utilisateur = (Utilisateur) session.get("user");
         listEmpruntUtil = port.getListEmpruntUtilisateur(utilisateur).getItem();
-        listOuvrage = port.getListOuvrage(utilisateur).getItem();
+        pseudonyme = utilisateur.getPseudonyme();
+        listOuvrage = port.getListOuvrage(pseudonyme).getItem();
         for(Emprunt emprunt:listEmpruntUtil){
             emprunt.setProlongeable(CompareDate.compareDate(emprunt.getDateDebut(), emprunt.getDateFin()));
             System.out.println(emprunt.getProlongeable());

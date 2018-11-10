@@ -119,6 +119,7 @@ public class GestionLoginAction extends ActionSupport implements SessionAware {
                 // Ajout de l'utilisateur en session
                 this.session.put("user", utilisateur);
                 this.session.put("idUtilisateur", utilisateur.getIdUtilisateur());
+                this.session.put("pseudonyme", utilisateur.getPseudonyme());
                 this.session.put("check", "true");
                 this.addActionMessage("Vous etes bien connecté");
                 vResult = ActionSupport.SUCCESS;

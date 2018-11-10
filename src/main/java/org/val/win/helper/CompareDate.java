@@ -24,7 +24,7 @@ public class CompareDate {
 
         boolean flag = true;
         Period p = Period.between(dateDebut, dateFin);
-        if (p.getMonths() > 2) {
+        if (p.getDays() > 28) {
             flag = false;
         }
         logger.info("les dates : " + dateDebut + " et " + dateFin + " on été comparées, le résultat est " + flag );

@@ -8,9 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fcfc03f7-2815-4869-b58f-ce5ba8367396" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/val/win/helper/CompareDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/val/win/helper/CompareDate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/val/win/service/P7Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/val/win/service/P7Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/val/win/Sha2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/val/win/Sha2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionLoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionLoginAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionWebappAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionWebappAction.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +31,7 @@
     <session id="-1337891560">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="82" />
+          <entry key="project.closed" value="83" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="6" />
           <entry key="project.open.time.12" value="3" />
@@ -45,7 +46,7 @@
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="6" />
           <entry key="project.open.time.22" value="7" />
-          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.28" value="1" />
@@ -62,7 +63,7 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="85" />
+          <entry key="project.opened" value="86" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -70,13 +71,13 @@
           <entry key="css" value="3" />
           <entry key="gitignore" value="4" />
           <entry key="iml" value="1" />
-          <entry key="java" value="79" />
+          <entry key="java" value="80" />
           <entry key="js" value="6" />
           <entry key="jsp" value="35" />
           <entry key="log" value="2" />
           <entry key="properties" value="7" />
           <entry key="stackdump" value="1" />
-          <entry key="wsdl" value="6" />
+          <entry key="wsdl" value="7" />
           <entry key="xhtml" value="1" />
           <entry key="xml" value="24" />
         </counts>
@@ -85,21 +86,21 @@
         <counts>
           <entry key="CSS" value="3" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="79" />
+          <entry key="JAVA" value="80" />
           <entry key="JSP" value="35" />
           <entry key="JavaScript" value="6" />
           <entry key="Log" value="2" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="Properties" value="7" />
           <entry key="XHTML" value="1" />
-          <entry key="XML" value="30" />
+          <entry key="XML" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
           <entry key="gitignore" value="16" />
-          <entry key="java" value="3944" />
+          <entry key="java" value="4263" />
           <entry key="js" value="895" />
           <entry key="jsp" value="3189" />
           <entry key="properties" value="51" />
@@ -108,7 +109,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3944" />
+          <entry key="JAVA" value="4263" />
           <entry key="JSP" value="3189" />
           <entry key="JavaScript" value="895" />
           <entry key="PLAIN_TEXT" value="34" />
@@ -164,27 +165,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/val/win/Sha2Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/ouvrage/ouvrage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/_include/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
@@ -205,8 +185,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/service/P7Service.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1182">
-              <caret line="104" column="29" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
+            <state relative-caret-position="314">
+              <caret line="39" column="6" lean-forward="true" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/service/P7ServiceImplService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="32" column="104" selection-start-line="32" selection-start-column="104" selection-end-line="32" selection-end-column="104" />
             </state>
           </provider>
         </entry>
@@ -214,7 +203,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="896">
+            <state relative-caret-position="945">
               <caret line="63" column="59" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
             </state>
           </provider>
@@ -224,8 +213,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/helper/CompareDate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11" column="80" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="80" />
+            <state relative-caret-position="405">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -245,8 +234,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionLoginAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="642">
+              <caret line="121" column="76" selection-start-line="121" selection-start-column="76" selection-end-line="121" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -254,10 +243,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionWebappAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2070">
-              <caret line="200" selection-start-line="200" selection-end-line="200" />
+            <state relative-caret-position="382">
+              <caret line="225" column="49" selection-start-line="225" selection-start-column="49" selection-end-line="225" selection-end-column="49" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/service.wsdl">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -299,7 +293,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/JS/style.css" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/JSP/utilisateur/login.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionLoginAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionUtilisateurAction.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/val/win/actionOuvrage.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/JS/main.js" />
@@ -316,12 +309,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/JSP/utilisateur/detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/struts.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/org/val/win/helper/CompareDate.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/val/win/helper/Sha2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionWebappAction.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/test/java/org/val/win/Sha2Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/val/win/helper/CompareDate.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/val/win/service/P7Service.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionLoginAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionWebappAction.java" />
       </list>
     </option>
   </component>
@@ -373,6 +367,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -551,7 +546,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
@@ -803,7 +797,8 @@
       <workItem from="1541576193891" duration="3786000" />
       <workItem from="1541584703161" duration="1019000" />
       <workItem from="1541607439321" duration="1070000" />
-      <workItem from="1541696865850" duration="820000" />
+      <workItem from="1541696865850" duration="1373000" />
+      <workItem from="1541877636017" duration="1133000" />
     </task>
     <servers />
   </component>
@@ -840,13 +835,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78943000" />
+    <option name="totallyTimeSpent" value="80629000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49857143" visible="true" weight="0.26739928" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49857143" visible="true" weight="0.27045178" />
       <window_info id="Structure" order="1" sideWeight="0.50142854" side_tool="true" weight="0.3009768" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -856,7 +851,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3510204" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2632653" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.48877552" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1048,16 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/service.wsdl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/service/P7ServiceImplService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="32" column="104" selection-start-line="32" selection-start-column="104" selection-end-line="32" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1086,48 +1071,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/helper/CompareDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="80" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/helper/Sha2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionLoginAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionWebappAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="63" column="59" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/val/win/Sha2Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="60">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1156,10 +1102,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" column="59" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/helper/CompareDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/helper/Sha2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/service/P7ServiceImplService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="32" column="104" selection-start-line="32" selection-start-column="104" selection-end-line="32" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionLoginAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="121" column="76" selection-start-line="121" selection-start-column="76" selection-end-line="121" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/webapp/action/GestionWebappAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="225" column="49" selection-start-line="225" selection-start-column="49" selection-end-line="225" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/service.wsdl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/val/win/service/P7Service.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1182">
-          <caret line="104" column="29" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
+        <state relative-caret-position="314">
+          <caret line="39" column="6" lean-forward="true" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
         </state>
       </provider>
     </entry>
