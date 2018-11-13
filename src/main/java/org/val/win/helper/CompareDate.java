@@ -24,6 +24,7 @@ public class CompareDate {
 
         boolean flag = true;
         Period p = Period.between(dateDebut, dateFin);
+        System.out.println(p.getDays());
         if (p.getDays() > 28) {
             flag = false;
         }
